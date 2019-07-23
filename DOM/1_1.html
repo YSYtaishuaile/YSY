@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">ysy太帅了</div>
+    <div id="div2">zyq最丑</div>
+    <button id="btn">按下按钮ysy就会变帅</button>
+    <script>
+    var oBtn = document.getElementById("btn");
+    var oDiv1 = document.getElementById("div1");
+    var oDiv2 = document.getElementById("div2");
+
+    oBtn.onclick = function(){
+        oDiv2.style.background = "green";
+        oDiv1.style.background = "blue";
+    }
+    </script>
+</body>
+</html>
