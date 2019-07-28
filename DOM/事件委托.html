@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        background: yellowgreen;
+    }
+</style>
+<body>
+    <button id="btn">点击添加</button>
+    <ul id="ul1">
+        <li>111</li>
+        <li>222</li>
+        <li>3333</li>
+    </ul>
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oUl = document.getElementById('ul1');
+        var ali = oUl.getElementsByTagName('li')
+        oBtn.onclick = function(){
+            var oLi = document.createElement('li');
+            oLi.innerHTML = 1+Math.random();
+            oUl.appendChild(oLi);
+        }
+        // for(i=0 ; i<ali.length ; i++){
+        //     ali[i].onclick = function(){
+        //         console.log(this.innerHTML);
+        //     }
+        // }
+        oUl.onclick = function(e){
+            console.log(e.target);
+
+            if(e.target.tagName == 'li'){
+                console.log(e.target.innerHTML);
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
