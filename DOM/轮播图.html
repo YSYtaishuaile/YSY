@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    #container{
+        width: 750px;
+        margin: 100px auto;
+        position: relative;  
+    }
+    #box a{
+        display: none;
+    } 
+    #box .seleted{
+        display: block;
+    }
+    #btn{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    #btn li,#arrow li{
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+
+    }
+    #btn .active{
+        background: red;
+    }
+    #arrow{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+
+</style>
+<body>
+    <div id="container">
+        <div id="box">
+            <a href="" class="seleted"><img src="1.jpg" alt=""></a>
+            <a href=""><img src="2.jpg" alt=""></a>
+            <a href=""><img src="3.jpg" alt=""></a>
+            <a href=""><img src="4.jpg" alt=""></a>
+            <a href=""><img src="5.jpg" alt=""></a>
+        </div>
+        <ul id="btn">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="arrow">
+            <li>&lt;</li>
+            <li>&gt;</li>
+        </ul>
+
+    </div>
+    <script>
+        var oBtn = document.getElementById("btn");
+        var aBtns = oBtn.getElementsByTagName('li');
+        var oImg = document.getElementById('img');
+        var aImg = oImg.getElementsByTagName('a');      
+
+        for(var i=0; i<aBtns.length; i++){
+            aBtns[i].idx = i;
+            aBtns[i].onclick = function(){
+                for( var j=0 ; j<aBtns ; j++){
+                    aBtns[j].className ='';
+                    aImg[j].className = ''
+                }
+                this.className = 'active';
+                 aImg [this.idx].className = 'seleted';
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
