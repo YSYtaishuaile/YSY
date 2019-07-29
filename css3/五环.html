@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #shang div{
+        float: left;
+        margin: 5px;
+
+    }
+    #xia div{
+        float: left;
+        
+        
+        
+    }
+    #shang{
+        overflow: hidden;
+    }
+    #div1 {
+        width: 200px;
+        height: 200px;
+        border: blue solid 10px;
+        border-radius: 50%
+    }
+
+    #div2 {
+        width: 200px;
+        height: 200px;
+        border: black solid 10px;
+        border-radius: 50%;
+    }
+    #div2::after{
+        width: 200px;
+        height: 200px;
+        border: black solid 10px;
+        border-radius: 50%;
+        border-left-color: transparent;
+    }
+
+    #div3 {
+        width: 200px;
+        height: 200px;
+        border: red solid 10px;
+        border-radius: 50%;
+    }
+
+    #div4 {
+        width: 200px;
+        height: 200px;
+        border: yellow solid 10px;
+        border-radius: 50%;
+        margin-left: 113px;
+        margin-top: -113px;
+    }
+    #div4::after{
+        width: 200px;
+        height: 200px;
+        border: yellow solid 10px;
+        border-radius: 50%;
+        margin-left: 113px;
+        margin-top: -113px;
+
+    }
+
+    #div5 {
+        width: 200px;
+        height: 200px;
+        border: green solid 10px;
+        border-radius: 50%;
+        margin-top: -113px;
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <div>
+        <div id="shang">
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <div id="div3"></div>
+        </div>
+        <div id="xia">
+            <div id="div4"></div>
+            <div id="div5"></div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
