@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    #small-box,#big-box{
+        width: 400px;
+        height: 400px;
+        float: left;
+        overflow: hidden;
+    }
+    #small-box {
+        position: relative;
+    }
+    #drag{
+        width: 200px;
+        height: 200px;
+        background: rgba(238, 234, 234, 0.5);
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #big-box{
+        display: none;
+        position: relative;
+    }
+    #big-img{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+</style>
+
+<body>
+    <div id="container">
+        <div id="small-box">
+            <img src="../DOM/image/1.jpg" alt="">
+            <span id="drag"></span>
+        </div>
+        <div id="big-box">
+            <img src="../DOM/image/2.jpg" alt="">
+
+        </div>
+    </div>
+    <script>
+        var oSmallBox = document.getElementById('small-box');
+        var oDrag = document.getElementById('drag');
+        var oBigBox = document.getElementById('big-box');
+
+        oSmallBox.onmouseover = function(){
+            oDrag.style.display = 'block';
+            oBigBox.style.display = 'block';
+        }
+        if(oDrag.offsetLeft <0){
+            oDrag.style.left = '0px';
+        }
+        if(oDrag.offsetLeft >= oSmallBox.offsetWidth - oDrag.offsetWidth){
+
+            o.
+        }
+
+
+        oSmallBox.onmousemove = function(e){
+            oDrag.style.left = e.clientX - oDrag.offsetWidth/2 +"px";
+            oDrag.style.top = e.clientY - oDrag.offsetHeight/2 +"px";
+        }
+
+    </script>
+
+</body>
+
+</html>
