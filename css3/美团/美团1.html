@@ -13,12 +13,11 @@
         margin: 0px;
         padding: 0px;
     }
-
     #nav {
-        height: 51.5px;
+        height: 50.5px;
         background: #06C1AE;
         display: flex;
-
+        border-bottom: 1px solid  rgb(3, 105, 95);
 
     }
 
@@ -54,29 +53,72 @@
     }
 
     #img-box {
-        width: 486.4px;
-        height: 142.68px;
+        height: 110.05px;
         background-image: url("http://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:d5896c44/touch/img/download_banner.png");
         background-size: 100%;
         margin: 0 auto;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid rgb(216, 212, 212);
+        
     }
-    .biaoqian{
+
+    .biaoqian {
         height: 162px;
         background: white;
         position: relative;
         display: flex;
+        flex-wrap: wrap;
+        
     }
-    .biaoqian li{
+
+    .biaoqian li {
         float: left;
-        width: 186.1px;
+        width: 20%;
         height: 81px;
         list-style: none;
         font-size: 16px;
+        padding-top: 5px;
+
+    }
+    #logo{
+        width: 40px;
+        height: 40px;
+        background: orange;
+        border-radius: 50%;
+        margin: 0 auto;
+        
+    }
+    #long-box{
+        font-size: 12px;
+        text-align: center;
+        color: rgb(43, 37, 37);
+        border: gray;
+   
+    }
+    #kong{
+        height: 10px;
+        border-bottom: 1px solid rgb(216, 212, 212);
+        border-top: 1px solid rgb(216, 212, 212);
+        background: #f0efed;
+      
+    }
+    #list-box{
+        height: 41.8px;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-bottom: 1px solid rgb(216, 212, 212);
+    }
+    .list-box-title{
+        font-size: .34rem;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 14px 10px 10px 0px;
+        line-height: 15px;
+
     }
 </style>
 
 <body>
-    <div>
+    <div id="zong">
         <div id="nav">
             <div id="nav-city">哈尔滨</div>
             <input class="nav-search" placeholder="输入商家/品类/商圈" type="text">
@@ -85,19 +127,51 @@
         <div id="img-box">
         </div>
         <ul class="biaoqian">
-            <li>美食 <a href=""></a></li>
-            <li>猫眼电影 <a href=""></a></li>
-            <li>酒店 <a href=""></a></li>
-            <li>休闲娱乐 <a href=""></a></li>
-            <li>外卖 <a href=""></a></li>
-            <li>KTV <a href=""></a></li>
-            <li>周边游 <a href=""></a></li>
-            <li>丽人 <a href=""></a></li>
-            <li>小吃快餐 <a href=""></a></li>
-            <li>分类 <a href=""></a></li>
-
-
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">美食</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">猫眼电影</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">酒店</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">休闲娱乐</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">外卖</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">KTV</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">周边游</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">丽人</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">小吃快餐</p>
+            </li>
+            <li>
+                <div id="logo"></div>
+                <p id="long-box">分类</p>
+            </li>
         </ul>
+        <div id="kong"></div>
+        <div id="list-box">
+            <h1 class="list-box-title">猜你喜欢</h1>
+        </div>
 
     </div>
 </body>
