@@ -8,16 +8,25 @@
 </head>
 <body>
     <div id="app">
-        {{msg}}
-        {{num}}
+        <ul>
+            <li v-for='obj in studentList'>{{obj.name}} | {{obj.age}}</li>
+        </ul> 
     </div>
     <script src="vue.js"></script>
     <script>
         let vm = new Vue({
             el:'#app',
             data:{
-                msg:'xixixi',
-                num:10
+                studentList:[
+                    {
+                        name:'zs',
+                        age:18
+                    },
+                    {
+                        name:'lisi',
+                        age:21
+                    }
+                ]
             }
         })
     </script>

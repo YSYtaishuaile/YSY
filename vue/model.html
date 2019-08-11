@@ -8,18 +8,11 @@
 </head>
 <body>
     <div id="app">
-        {{msg}}
-        {{num}}
+        <input type="text" v-model='msg'>
+        <h3>爱好：</h3>
+        <input type="checkbox" v-model='hobby' 
+        value='篮球'>篮球
+        <input type="checkbox" v-model='hobby' value="唱">
     </div>
-    <script src="vue.js"></script>
-    <script>
-        let vm = new Vue({
-            el:'#app',
-            data:{
-                msg:'xixixi',
-                num:10
-            }
-        })
-    </script>
 </body>
 </html>

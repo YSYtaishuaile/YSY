@@ -8,16 +8,21 @@
 </head>
 <body>
     <div id="app">
-        {{msg}}
-        {{num}}
+         <span>{{msg}}</span>
+         <button @click='change("55555")'>click</button>
     </div>
     <script src="vue.js"></script>
     <script>
         let vm = new Vue({
-            el:'#app',
+            el:"#app",
             data:{
-                msg:'xixixi',
-                num:10
+                msg:'hahah'
+            },
+            methods:{
+                change(value){
+                    this.msg = value;
+                    console.log(event.target);
+                }
             }
         })
     </script>
