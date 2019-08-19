@@ -1,0 +1,22 @@
+#top{
+    height: 33px;
+    background:#a9180a;
+    line-height: 32px;
+    border-bottom:1px solid #a9180a;
+}
+
+ul{
+    list-style: none;
+}
+#top-head{
+    float: left;
+    line-height: 32px;
+}
+#top-head a{
+    padding: 0px 10px 0px 20px;
+    text-decoration: none;
+}
+#top-head a ,#top-head span{
+    color: white;
+    font-size: 12px;
+}

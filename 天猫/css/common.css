@@ -1,0 +1,11 @@
+.wrapper{
+    width: 1230px;
+    margin: 0 auto;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    -webkit-font-smoothing: antialiased;
+}
