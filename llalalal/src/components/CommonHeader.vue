@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <img src="./../assets/images/01.jpg" alt="">
-        首页 
+    <div class='header' :style="{background:$store.stat.color}">
+     {{$store.state.title}}
     </div>
 </template>
 
@@ -12,7 +11,11 @@
 </script>
 
 <style lang="scss" scoped>
-    img{
-        width: 100px;
+    .header{
+        height: 50px;
+        background: red;
+        position: fixed;
+        top: 0px;
+        width: 100%;
     }
 </style>

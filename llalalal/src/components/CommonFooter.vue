@@ -1,19 +1,66 @@
 <template>
-    <div>
-        <ul>
-            <li>
-                阿里巴巴集团| 淘宝网 | 天猫 | 聚划算 | 全球速卖通 | 阿里巴巴国际交易市场| 1688 | 阿里妈妈 | 飞猪 | 阿里云计算 | AliOS | 阿里通信 | 万网 | 高德 | UC | 友盟 | 虾米 | 钉钉 | 支付宝
-            </li>
-        </ul>
+  <div id="footer" :style="{background:$store.state.color}">
+        <router-link v-for="(obj,index) in menu" :key="index" @click.native="change({title:obj.title,color:obj.color})" :to="obj.path">{{obj.title}}</router-link>
     </div>
 </template>
 
 <script>
+    import{mapMutations} from 'vuex'
     export default {
+        data(){
+            return{
+                menu:[
+                    {
+                        title:'电影',
+                        path:'/',
+                        color:'red'
+                    },
+                    {
+                        title:'音乐',
+                        path:'/music',
+                        color:'green'
+                    },
+                    {
+                        title:'图书',
+                        path:'/book',
+                        color:'orange'
+                    },
+                    {
+                        title:'图片',
+                        path:'/photo',
+                        color:'yellow'
+                    }
+                ]
+            }
+            },
+             methods:mapMutations(['change']),
+            created(){
+                this.menu.forEach((obj,index)=>{
+                    if(obj.path == this.$route.path){
+                        this.change({title:obj.title,color:color.obj})
+                    }
+                });
+            }
         
     }
 </script>
 
 <style lang="scss" scoped>
-    
+#footer {
+  height: 1rem;
+  line-height: 1rem;
+  background: #f00;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  a {
+    flex: 1;
+    text-align: center;
+    color: #000;
+    &.router-link-exact-active {
+      color: #fff;
+    }
+  }
+}
 </style>

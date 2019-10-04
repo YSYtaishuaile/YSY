@@ -8,7 +8,10 @@ export default new Vuex.Store({
 
   },
   mutations: {
-
+      change(state,arg){
+        state.title = arg.title;
+        state.color = arg.color;
+      }
   },
   actions: {
 

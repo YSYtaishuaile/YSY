@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <router-view/>
-         <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/movie">movie</router-link>|
-      
-    </div>
+    <common-header></common-header>
+        <div id="container">
+           <router-view></router-view>
+        </div>
+        <common-footer></common-footer>
+    
   </div>
 </template>
 <script>
@@ -21,5 +20,7 @@
     }
 </script>>
 <style lang="scss">
-
-</style>
+  #container{
+    margin: 50px 0;
+  }
+  </style>
